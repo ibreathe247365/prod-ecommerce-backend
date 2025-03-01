@@ -143,12 +143,15 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   database_extra: { ssl: { rejectUnauthorized: false } },
-  // Uncomment the following lines to enable REDIS
   redis_url: REDIS_URL,
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
+  featureFlags: {
+    product_categories: true,
+    
+  },
   projectConfig,
   plugins,
   modules,
